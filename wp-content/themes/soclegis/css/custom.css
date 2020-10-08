@@ -327,5 +327,9 @@ article.feature-1 .feature__body .description > p {
 }
 
 .bar .logo{
-    max-height: 3.2rem;
+    max-height: 3.6rem;
+}
+
+@media (min-width: ) and (max-width: 991px){
+
 }

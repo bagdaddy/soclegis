@@ -36,7 +36,7 @@
 
 
                             <img class="logo logo-dark" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />
-                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />
+                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-light.png" />
                         </a>
                     </div>
                 </div>
