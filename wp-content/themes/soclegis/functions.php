@@ -1,5 +1,5 @@
 <?php
-const VERSION = '5.4.7';
+const VERSION = '5.4.8';
 
 /**
  * Created by PhpStorm.
