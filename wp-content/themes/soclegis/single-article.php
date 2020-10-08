@@ -15,6 +15,7 @@
                             <img alt="Image" src="<?= $img; ?>" />
                             <?php the_content();?>
                         </div>
+                        <?php if(get_field('share-facebook')):?>
                         <div class="article__share text-center">
                             <a class="btn bg--facebook btn--icon btn-social" href="https://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>">
                                         <span class="btn__text">
@@ -23,6 +24,7 @@
                                         </span>
                             </a>
                         </div>
+                        <?php endif; ?>
                     </article>
                     <!--end item-->
                 </div>

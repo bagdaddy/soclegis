@@ -10,24 +10,11 @@
     <script src="<?php echo get_template_directory_uri()?>/js/jquery-3.1.1.min.js"></script>
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <?php if(get_post_type() === 'article'):?>
-    <?php $sharefb = get_field('share-facebook');
-        if($sharefb):
-            $img = get_field('nuotrauka');
-    ?>
-        <meta property="og:title" content="<?php the_title(); ?>">
-        <meta property="og:image" content="<?php echo $img; ?>">
-        <meta property="og:description" content="<?php echo get_the_excerpt(); ?>">
-        <meta property="og:url" content="<?php echo get_permalink(); ?>">
-        <meta property="og:locale" content="lt_LT">
-        <?php endif; ?>
-    <?php endif; ?>
 
     <?php wp_head(); ?>
 
 
 </head>
-
 <body <?php body_class(); ?>>
 <a id="start"></a>
 <div class="nav-container">
