@@ -7,6 +7,7 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
+
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
@@ -35,8 +36,8 @@
 //                            ?>
 
 
-                            <img class="logo logo-dark" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />
-                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-light.png" />
+                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />
+                            <img class="logo logo-dark" alt="logo" src="/wp-content/themes/soclegis/img/logo-light.png" />
                         </a>
                     </div>
                 </div>

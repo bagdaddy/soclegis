@@ -128,7 +128,7 @@ function cptui_register_news_cpt(){
         "hierarchical" => false,
         "rewrite" => [ "slug" => "article", "with_front" => true ],
         "query_var" => true,
-        "supports" => [ "title", "editor", "thumbnail" ],
+        "supports" => [ "title", "editor", "thumbnail", "excerpt" ],
     ];
 
     register_post_type( "article", $args );

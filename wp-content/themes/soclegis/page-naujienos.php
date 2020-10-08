@@ -36,7 +36,7 @@ $args = array(
                             <div class="masonry__item col-lg-4 col-md-6" data-masonry-filter="Marketing">
                                 <?php
                                 $img = get_field('nuotrauka');
-                                $url = get_field('nuoroda');
+                                $url = get_field('nuoroda') ? get_field('nuoroda') : get_permalink(get_the_ID());
                                 $date = get_field('data');
                                 $desc = get_field('aprasymas');
                                 $datetime = DateTime::createFromFormat('d/m/Y', $date);
@@ -50,7 +50,7 @@ $args = array(
 
                                             <span><?php echo $datetime->format('y.m.d');?></span>
                                             <h5><?php echo get_the_title()?></h5>
-                                            <div class="description"><?php echo $desc;?></div>
+                                            <div class="description"><?php echo get_the_excerpt();?></div>
                                         </div>
                                     </a>
                                 </article>

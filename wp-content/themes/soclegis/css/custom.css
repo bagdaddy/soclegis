@@ -197,7 +197,7 @@ section.services{
 }
 
 .pos-vertical-center{
-    top: 35%;
+    top: 45%;
 }
 
 .contact {
@@ -219,7 +219,11 @@ section.services{
 
 .clients .client{
     display:inline;
-    margin: 5px;
+
+}
+
+.clients .client:not(:last-child){
+    margin: 25px;
 }
 
 .clients .client .client-img{
@@ -259,6 +263,9 @@ section.services{
     color: black;
 }
 
+.menu-horizontal li.menu-item {
+    vertical-align: text-top;
+}
 .dark li a{
     color: #252525 !important;
     transition: 0.15s ease-in-out;
@@ -267,7 +274,7 @@ section.services{
 }
 
 .dark li a:hover{
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     padding-bottom: 1px;
 }
 
@@ -279,6 +286,10 @@ section.services{
 
 .feature-1 > a .block + .feature__body{
     border-radius: unset;
+}
+
+.feature__body .description{
+    padding-top: 10px;
 }
 
 .feature-1 a:hover{
@@ -328,8 +339,4 @@ article.feature-1 .feature__body .description > p {
 
 .bar .logo{
     max-height: 3.6rem;
-}
-
-@media (min-width: ) and (max-width: 991px){
-
 }

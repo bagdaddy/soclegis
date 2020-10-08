@@ -10,6 +10,18 @@
     <script src="<?php echo get_template_directory_uri()?>/js/jquery-3.1.1.min.js"></script>
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <?php if(get_post_type() === 'article'):?>
+    <?php $sharefb = get_field('share-facebook');
+        if($sharefb):
+            $img = get_field('nuotrauka');
+    ?>
+        <meta property="og:title" content="<?php the_title(); ?>">
+        <meta property="og:image" content="<?php echo $img; ?>">
+        <meta property="og:description" content="<?php echo get_the_excerpt(); ?>">
+        <meta property="og:url" content="<?php echo get_permalink(); ?>">
+        <meta property="og:locale" content="lt_LT">
+        <?php endif; ?>
+    <?php endif; ?>
 
     <?php wp_head(); ?>
 
@@ -18,13 +30,14 @@
 
 <body <?php body_class(); ?>>
 <a id="start"></a>
-<div class="nav-container ">
+<div class="nav-container">
     <!--end bar-->
-    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs bar--absolute bar--transparent page">
+    <nav id="menu1" class="bar bar--sm bar-1 hidden-xs bar--transparent page">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1 col-md-2 hidden-xs">
-                    <div class="bar__module">
+
+                <div class="col-lg-12 col-md-12 text-right text-left-xs text-left-sm">
+                    <div style="float: left; display:inline;" class="bar__module">
                         <a href="/">
                             <?php
                             $custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -38,12 +51,10 @@
                             ?>
 
 
-                            <!--                            <img class="logo logo-dark" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />-->
-                            <!--                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-light.png" />-->
+                            <img class="logo logo-dark" alt="logo" src="/wp-content/themes/soclegis/img/logo-dark.png" />
+                            <img class="logo logo-light" alt="logo" src="/wp-content/themes/soclegis/img/logo-light.png" />
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'secondary_menu',
