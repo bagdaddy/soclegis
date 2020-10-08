@@ -1,0 +1,331 @@
+/*! Place your custom styles here */
+.menu-item {
+    font-size:16px;
+    color: #ffffff;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+.header{
+    font-size:38px;
+}
+
+.two-column-container {
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+    columns: 2 200px;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+}
+.wrapper {
+    overflow: hidden;
+    padding: .5em;
+}
+
+.wrapper h2 + p {
+    width: calc(100% - 50px);
+}
+
+.about-us-header{
+    text-align: center;
+}
+
+.about-us-section{
+    text-align: left !important;
+}
+
+.about-us-section .lead {
+    font-size:17px;
+}
+.text-color-white h2, .text-color-white h4, .text-color-white p {
+    color: white !important;
+}
+
+.img-with-overlay {
+    background: black;
+    overflow: hidden;
+}
+
+.img-with-overlay img{
+    opacity: 0.4;
+    object-fit: cover;
+}
+.wrap:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: rgba(37, 37, 37, 0.5);
+    z-index:999;
+}
+
+.bg--secondary{
+    background-color: #F5F5F5 !important;
+}
+
+#parallax-banner p{
+    font-size: 19px;
+}
+
+.services h3{
+    margin-bottom: unset;
+}
+
+.services ul{
+    padding-left:20px;
+}
+
+.services ul li{
+    list-style: square;
+}
+
+footer h5.unpad--bottom{
+    margin-bottom: unset;
+}
+
+.footer-menu p{
+    margin-top:5px;
+}
+
+section.services{
+    padding-top:40px;
+}
+
+.services.services-list ul{
+    margin-top: 10px;
+}
+
+.services h3{
+    font-size:27px;
+}
+
+.services.services-list li{
+    font-size:20px;
+    line-height:1.75;
+}
+
+@media (min-width:992px){
+    .services.services-list div{
+        width:50%;
+        display:inline-block;
+    }
+
+    .services.services-list div:nth-child(even){
+        float:right;
+    }
+}
+
+@media (max-width: 992px){
+    .services.services-list div {
+        margin:20px;
+    }
+    .services.services-list h3{
+        text-align:center;
+    }
+}
+
+.parallax-text-container p{
+    font-size:20px;
+    line-height:1.7;
+}
+
+.feature p{
+    font-size:17px;
+}
+
+.feature h4{
+    font-size: 20px;
+}
+
+.wrap:before{
+    background: rgba(37, 37, 37, 0.65);
+}
+
+@media (max-width: 480px){
+    .services.services-list h3{
+        text-align: left !important;
+        font-size:24px;
+    }
+	.parallax-text-container p{
+        font-size: 17px;
+        line-height:1.7;
+        padding-right:20px;
+        padding-left:20px;
+    }
+}
+
+
+.subheader{
+    font-size:25px;
+}
+
+@media(max-width: 992px){
+	h1.header{
+		font-size: 40px;
+	}
+	.subheader{
+		font-size:20px;
+	}
+}
+
+@media (max-width: 767px){
+    .text-center-xs {
+        text-align: center !important;
+    }
+
+    .subheader{
+        font-size: 18px;
+    }
+
+    h2.header{
+        font-size: 25px;
+    }
+
+    h2.services{
+        font-size: 30px;
+        text-decoration: underline;
+    }
+
+    .services-list h3{
+        font-size: 23px;
+    }
+}
+
+.pos-vertical-center{
+    top: 35%;
+}
+
+.contact {
+    margin-top:15px;
+    margin-bottom:35px;
+}
+
+.contact p{
+    font-size: 16px;
+}
+
+.clients{
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    width:100%;
+    height: 100%;
+}
+
+.clients .client{
+    display:inline;
+    margin: 5px;
+}
+
+.clients .client .client-img{
+    height: 70px;
+}
+
+.clients-container{
+    /*border-top: 1px solid #ebebeb;*/
+    /*padding-top: 15px;*/
+    /*margin-bottom: 20px;*/
+}
+
+.masonry{
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 50px;
+}
+
+.header label{
+    text-align:center;
+    font-size: 20px;
+}
+
+.clients-container .header, .contact .header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact p{
+    margin-bottom: 5px;
+}
+
+.social-list.list-inline li:not(:last-child){
+    margin-right: .6rem;
+}
+
+.menu-horizontal.dark{
+    color: black;
+}
+
+.dark li a{
+    color: #252525 !important;
+    transition: 0.15s ease-in-out;
+    padding-bottom: 5px;
+    border-bottom: 1px;
+}
+
+.dark li a:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 1px;
+}
+
+/* make article cards pointy */
+
+.feature-1 > a.block img{
+    /*border-radius: unset;*/
+}
+
+.feature-1 > a .block + .feature__body{
+    border-radius: unset;
+}
+
+.feature-1 a:hover{
+    text-decoration: none;
+}
+
+a.no-styling{
+    font-size: unset;
+    color: unset;
+    font-weight: unset;
+}
+
+.boxed{
+    padding: 1.3rem;
+}
+
+article.feature-1 h5{
+    font-size: 1.3rem;
+    line-height: 1.3em;
+}
+
+article.feature-1 .feature__body .description > p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.3em;
+}
+
+.news .page-header{
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+
+.news .page-header h2{
+    margin-bottom: 10px;
+}
+
+.header-title{
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 12px 0 15px 0;
+}
+
+.pre-footer{
+    margin-bottom: 15px;
+}
+
+.bar .logo{
+    max-height: 3.2rem;
+}
