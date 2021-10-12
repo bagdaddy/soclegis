@@ -44,7 +44,7 @@
                 <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
                     <?php
                         wp_nav_menu(array(
-                                'theme_location' => 'main_menu',
+                            'theme_location' => 'main_menu',
                             'menu_class' => 'menu-horizontal text-left',
                             'container_class' => 'bar__module'
                         ));

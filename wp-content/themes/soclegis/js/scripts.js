@@ -2531,11 +2531,11 @@ mr = (function (mr, $, window, document){
 
        
 
-        $('a.inner-link').each(function(){
+        $('.inner-link').each(function(){
             var sectionObject = {},
                 link          = $(this),
-                href          = link.attr('href'),
-                validLink     = new RegExp('^#[^\r\n\t\f\v\#\.]+$','gm');
+                href          = link.attr('href').replace(/^\/|\/$/g, ''),
+                validLink     = new RegExp('^/?#[^\r\n\t\f\v\#\.]+$','gm');
                             
             if(validLink.test(href)){
                 
@@ -2586,8 +2586,9 @@ mr = (function (mr, $, window, document){
         if(innerLinks.length){
             innerLinks.each(function(index){
                 var link          = $(this),
-                    href          = link.attr('href');
-                if(href.charAt(0) !== "#"){
+                    href          = link.attr('href').replace(/^\/|\/$/g, ''),
+                    validLink = new RegExp('^/?#[^\r\n\t\f\v\#\.]+$', 'gm');
+                if(!validLink.test(href)){
                     link.removeClass('inner-link');
                 }
             });

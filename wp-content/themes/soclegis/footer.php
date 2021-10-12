@@ -5,8 +5,8 @@
         </div>
         <p>
             MB "Soclegis"<br/>
-            el.p.: <b>info@soclegis.lt</b>,
-            tel.: <b>868644030</b>,
+            el.p.: <b>info@soclegis.lt</b><br/>
+            Direktorius Vykintas Bagdonas, tel.: <b>868644030</b><br/>
             Į.k. <b>305527283</b><br/>
         </p>
         <ul class="social-list list-inline list--hover">
@@ -20,42 +20,13 @@
             </li>
         </ul>
     </div>
-    <?php
-    $args = array(
-        'numberposts' => -1,
-        'post_type' => 'client',
-        'order' => 'ASC',
-
-    );
-    $the_query = new WP_Query($args);
-    if($the_query->have_posts()):
-        ?>
-        <div class="clients-container">
-            <div class="header centered">
-                <label style="text-align:center">Mūsų klientai ir partneriai:</label>
-            </div>
-            <div class="row clients centered">
-                <?php
-                while($the_query->have_posts()):
-                    ?>
-                    <div class="client">
-                        <?php
-                        $the_query->the_post();
-                        $logo = get_field('logotipas')['url'];
-                        $link = get_field('link');
-                        ?>
-                        <a href="<?php echo $link?>" target="_blank">
-                            <img src="<?php echo $logo;?>" class="client-img">
-                        </a>
-                    </div>
-                <?php
-                endwhile;
-                ?>
-            </div>
+    <div class="clients-container">
+        <div class="centered">
+            <a class="btn btn--primary-1" href="<?= get_post_type_archive_link('client'); ?>">
+                <span class="btn__text"><?= __('Mūsų klientai ir partneriai') ?></span>
+            </a>
         </div>
-    <?php
-    endif;
-    ?>
+    </div>
 </div>
 
 <footer class="text-center-xs space--xs bg--secondary">

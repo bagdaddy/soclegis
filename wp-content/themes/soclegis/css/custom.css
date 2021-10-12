@@ -4,12 +4,12 @@
     color: #ffffff;
 }
 
-.menu-item:hover {
-    cursor: pointer;
+.centered {
+    text-align: center;
 }
 
-.header{
-    font-size:38px;
+.menu-item:hover {
+    cursor: pointer;
 }
 
 .two-column-container {
@@ -210,11 +210,13 @@ section.services{
 }
 
 .clients{
-    display:inline-block;
-    vertical-align:middle;
-    text-align:center;
-    width:100%;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
     height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .clients .client{
@@ -268,14 +270,20 @@ section.services{
 }
 .dark li a{
     color: #252525 !important;
+}
+
+.dark li:not(.active) a {
     transition: 0.15s ease-in-out;
     padding-bottom: 5px;
     border-bottom: 1px;
 }
-
-.dark li a:hover{
+.dark li:not(.active) a:hover{
     border-bottom: 2px solid black;
     padding-bottom: 1px;
+}
+
+.dark li.active a {
+    border-bottom: 2px solid black;
 }
 
 /* make article cards pointy */
@@ -339,4 +347,55 @@ article.feature-1 .feature__body .description > p {
 
 .bar .logo{
     max-height: 3.6rem;
+}
+
+.blog-article-wide .lead{
+    margin-bottom: 1rem;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.blog-article-wide a:hover {
+    text-decoration: none;
+}
+
+.blog-article-wide .content {
+    padding-left: 20px;
+}
+
+.blog-article-wide h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.blog-article-wide:not(:last-child) {
+    margin-bottom: unset;
+}
+
+.nav-container.page {
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 12px 0 15px 0;
+}
+
+.member .member-logo img {
+    padding: 0 55px 10px 55px;
+    max-height: 70px;
+}
+
+.member .member-logo {
+    border-bottom: #d3d3d352 solid 2px;
+    margin-bottom: 10px;
+}
+
+.member.text-center p {
+    margin:0;
+}
+
+.member.text-center h5 {
+    margin-bottom: 0.5em;
 }

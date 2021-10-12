@@ -17,7 +17,7 @@
 </head>
 <body <?php body_class(); ?>>
 <a id="start"></a>
-<div class="nav-container">
+<div class="nav-container page">
     <!--end bar-->
     <nav id="menu1" class="bar bar--sm bar-1 hidden-xs bar--transparent page">
         <div class="container">

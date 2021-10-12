@@ -1,5 +1,5 @@
 <?php
-const VERSION = '5.4.8';
+const VERSION = '5.6';
 
 /**
  * Created by PhpStorm.
@@ -19,7 +19,7 @@ function soclegis_scripts(){
     wp_enqueue_style('soclegis-custom', get_theme_file_uri('/css/custom.css'),'', VERSION);
     wp_enqueue_style('infinite-slider', get_theme_file_uri('/css/infinite-slider.css'), wp_get_theme()->get('Version'));
 
-    wp_enqueue_script('soclegis-jquery', get_template_directory_uri().'/js/jquery-3.1.1.min.js', array(), false, true );
+    wp_enqueue_script('soclegis-jquery', get_template_directory_uri().'/js/jquery-3.1.1.min.js', array(), false, false );
     wp_enqueue_script('soclegis-flickity-js', get_template_directory_uri().'/js/flickity.min.js',  array(), false, true );
     wp_enqueue_script('soclegis-easypiechart', get_template_directory_uri().'/js/easypiechart.min.js',  array(), false, true );
     wp_enqueue_script('soclegis-parallax', get_template_directory_uri().'/js/parallax.js',  array(), false,true );
@@ -45,6 +45,16 @@ function soclegis_custom_new_menu() {
     );
 }
 add_action( 'init', 'soclegis_custom_new_menu' );
+
+function add_specific_menu_location_atts( $atts, $item, $args ) {
+    // check if the item is in the primary menu
+    if( $args->menu->slug == 'main-menu' ) {
+        // add the desired attributes:
+        $atts['class'] = ' inner-link';
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 100, 3 );
 
 function soclegis_custom_logo_setup() {
     $defaults = array(
@@ -79,7 +89,7 @@ function cptui_register_client_cpts() {
         "show_in_rest" => true,
         "rest_base" => "",
         "rest_controller_class" => "WP_REST_Posts_Controller",
-        "has_archive" => false,
+        "has_archive" => true,
         "show_in_menu" => true,
         "show_in_nav_menus" => true,
         "delete_with_user" => false,
@@ -87,7 +97,7 @@ function cptui_register_client_cpts() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => [ "slug" => "client", "with_front" => true ],
+        "rewrite" => [ "slug" => "klientai", "with_front" => true ],
         "query_var" => true,
         "supports" => [ "title", "editor", "thumbnail" ],
     ];
@@ -142,3 +152,14 @@ function my_mime_types($mime_types){
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_mime_types', 1, 1);
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
+
+add_image_size('logo', 0, 100);
