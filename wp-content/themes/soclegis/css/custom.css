@@ -382,9 +382,30 @@ article.feature-1 .feature__body .description > p {
     padding: 12px 0 15px 0;
 }
 
+.member .boxed {
+    transition: all .3s ease-in-out;
+}
+
+/*.member .boxed {*/
+/*    transition: box-shadow .5s ease-in-out;*/
+/*}*/
+/**/
+/*.member:hover .boxed{*/
+/*    background-color: #000;*/
+/*}*/
+
+.member:hover .boxed {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+}
+
 .member .member-logo img {
     padding: 0 55px 10px 55px;
     max-height: 70px;
+}
+
+.member a:hover {
+    text-decoration: none;
 }
 
 .member .member-logo {
